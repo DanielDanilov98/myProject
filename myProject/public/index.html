@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="assets/images/israel.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="assets/images/Quicksell.jpg" type="image/x-icon" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -12,31 +12,64 @@
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script defer src="../src/app.js" type="module"></script>
 
-    <title>IsraelNews</title>
+    <title>Quicksell</title>
   </head>
 
   <body>
-    <header></header>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-color" aria-label="Fifth navbar example">
+        <div class="container-fluid">
+          <span id="home-link" class="navbar-brand cursor text-light">Home</span>
+          <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="navbar-collapse collapse" id="navbarsExample05">
+            <div class="d-flex justify-content-between col-12">
+              <div>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <span class="nav-link active cursor text-light" aria-current="page" id="about-page-link" tabindex="1">About</span>
+                  </li>
+                  <li id="add-pic-link-container" class="nav-item">
+                    <span class="nav-link active cursor text-light" aria-current="page" id="create-pic-page-link">Add Product</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <ul id="login-link-container" class="navbar-nav">
+                  <li class="nav-item">
+                    <span class="nav-link active cursor text-light" aria-current="page" id="signup-page-link" tabindex="2">Signup</span>
+                  </li>
+                  <li class="nav-item">
+                    <span class="nav-link active cursor text-light" aria-current="page" id="login-page-link">Login</span>
+                  </li>
+                </ul>
+                <ul id="logout-link-container" class="d-none">
+                  <li class="nav-item dropdown">
+                    <span class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">
+                      <i class="bi bi-person-circle"></i>
+                    </span>
+                    <ul class="dropdown-menu" style="transform: translate(-100px, 10px)">
+                      <li>
+                        <span id="edit-user-link" class="dropdown-item cursor text-light"><i class="bi bi-pencil-square"></i> Edit User</span>
+                      </li>
+                      <li>
+                        <span id="logout-link" class="dropdown-item cursor text-light"><i class="bi bi-dash-circle"></i> Logout</span>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
     <main></main>
 
-    <div class="container">
-      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <div class="col-md-4 d-flex align-items-center">
-          <span class="mb-3 cursor mb-md-0 text-muted">Created By Daniel Danilov &copy;</span>
-        </div>
-
-        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-          <li class="ms-3">
-            <a class="text-muted" href="https://twitter.com/"><i class="bi bi-twitter"></i></a>
-          </li>
-          <li class="ms-3">
-            <a class="text-muted" href="https://www.instagram.com/"><i class="bi bi-instagram"></i> </a>
-          </li>
-          <li class="ms-3">
-            <a class="text-muted" href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
-          </li>
-        </ul>
-      </footer>
-    </div>
+    <footer class="border-top pt-3 navbar-color center">
+      <p class="text-light">Created By Daniel Danilov &copy;</p>
+    </footer>
   </body>
 </html>

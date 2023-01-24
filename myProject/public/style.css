@@ -9,6 +9,9 @@
   justify-content: center;
   align-items: center;
 }
+.navbar-color {
+  background-color: rgb(58, 181, 74);
+}
 
 .cursor {
   cursor: pointer;
