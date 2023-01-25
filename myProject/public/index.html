@@ -84,6 +84,310 @@
           <input type="text" placeholder="Search product by title" class="form-control" id="search-input" />
         </div>
       </div>
+
+      <!-- info display -->
+      <div id="data-container" class="d-block">
+        <!-- display controllers -->
+        <div class="container mb-2">
+          <div class="d-flex justify-content-between">
+            <div>
+              <i id="cards-icon" class="bi bi-grid-3x3-gap-fill cursor fs-3 p-1"></i>
+              <i id="table-icon" class="bi bi-table fs-3 p-1 cursor"></i>
+            </div>
+            <div>
+              <i id="sort-down-icon" class="bi bi-sort-alpha-down-alt fs-3 p-1 cursor"></i>
+              <i id="sort-up-icon" class="bi bi-sort-alpha-down fs-3 p-1 cursor"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- cards display -->
+
+        <div id="cards-display" class="d-dlock">
+          <div class="container">
+            <div id="cards" class="row"></div>
+          </div>
+        </div>
+
+        <!-- table display -->
+        <div id="table-display" class="d-none">
+          <table class="table container">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>image</th>
+                <th>product</th>
+                <th>Title</th>
+                <th>Credit</th>
+                <th>Edit</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- no info display -->
+      <div id="no-data-container" class="d-none">
+        <div class="center m-t">
+          <div class="col-12 col-md-10 col-xl-8">
+            <h2 class="fs-5">OOOps... It seems that there are no product to show</h2>
+            <p id="goto-create-product-page-link" class="cursor text-primary">click here to add a new product...</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- about page -->
+      <div id="about-page" class="d-none">
+        <!-- about page title -->
+        <div class="center mt-4">
+          <div class="col-12 col-md-10 col-xl-8">
+            <h1 id="about-page-title" class="text-center display-4">ABOUT PAGE</h1>
+            <h2 id="about-page-subtitle" class="fs-5">About our work</h2>
+            <hr />
+          </div>
+        </div>
+      </div>
+
+      <!-- create product page -->
+      <div id="create-product-page" class="d-none">
+        <!-- create product page title -->
+        <div class="center mt-4">
+          <div class="col-12 col-md-10 col-xl-8">
+            <h1 id="create-product-title" class="text-center display-4">CREATE PRODUCT PAGE</h1>
+            <h2 id="create-product-subtitle" class="fs-5">Here you can create product</h2>
+            <hr />
+          </div>
+        </div>
+        <div class="center">
+          <form class="col-12 col-md-10 col-xl-8 border p-2 rounded">
+            <div>
+              <label for="url-field">url</label>
+              <input type="url" class="form-control mb-2" name="url" id="url-field" minlength="2" />
+              <span id="url-error-span" class="text-danger"></span>
+            </div>
+
+            <div>
+              <label for="alt-field">alt</label>
+              <input type="text" class="form-control mb-2" name="alt" id="alt-field" minlength="2" />
+              <span id="alt-error-span" class="text-danger"></span>
+            </div>
+
+            <div>
+              <label for="credit-field">Credit</label>
+              <input type="text" class="form-control mb-2" name="credit" id="credit-field" minlength="2" />
+              <span id="credit-error-span" class="text-danger"></span>
+            </div>
+            <div>
+              <label for="price-field">Price</label>
+              <input type="number" class="form-control mb-2" name="price" id="price-field" minlength="2" />
+              <span id="price-error-span" class="text-danger"></span>
+            </div>
+
+            <input type="button" id="submit-create-product-btn" value="Submit" class="btn btn-primary col-12 mb-2" disabled />
+            <input type="button" id="cancel-create-product-btn" value="Cancel" class="btn btn-outline-danger col-12 mb-2" />
+          </form>
+        </div>
+      </div>
+
+      <!-- login page -->
+      <div id="login-page" class="d-none">
+        <!-- login page title  -->
+        <div class="center mt-4">
+          <div class="col-12 col-md-10 col-xl-8">
+            <h1 id="login-title" class="text-center display-4">LOGIN PAGE</h1>
+            <h2 id="login-subtitle" class="fs-5">Here you can login</h2>
+            <hr />
+          </div>
+        </div>
+        <div class="center h50">
+          <form class="col-12 col-md-6 col-xl-4 bg-light border p-3 rounded">
+            <div class="row">
+              <div class="col-12">
+                <label for="login-email">Email <span class="text-danger">*</span> </label>
+                <input placeholder="user@gmail.com" id="login-email" class="form-control" name="login-email" type="email" autocomplete="off" />
+                <span id="login-email-error" class="text-danger"></span>
+              </div>
+              <div class="col-12">
+                <label for="login-password">Password <span class="text-danger">*</span> </label>
+                <input placeholder="enter password" id="login-password" class="form-control" name="login-password" type="password" autocomplete="off" />
+                <span id="login-password-error" class="text-danger"></span>
+              </div>
+              <div class="col-12 my-1">
+                Not registered yet?
+                <span id="link-to-signup-page" class="text-primary cursor">Click here...</span>
+              </div>
+              <div class="col-12">
+                <input id="submit-login-btn" type="button" class="btn btn-primary col-12 my-2" value="Login" disabled />
+
+                <input type="button" class="btn btn-danger col-12 mb-2" value="Cancel" id="cancel-login-btn" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- signup page -->
+      <div id="signup-page" class="d-none">
+        <div class="bg-light">
+          <!-- signup page title -->
+          <div class="center pt-4">
+            <div class="col-12 col-md-10 col-xl-8">
+              <h1 class="text-center display-4">SIGNUP PAGE</h1>
+              <h2 class="fs-5">Signup and start sell and buy product</h2>
+              <hr />
+            </div>
+          </div>
+
+          <div class="center">
+            <form class="form col-12 col-md-10 col-xl-8 border p-2 rounded">
+              <h6>Name</h6>
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <label for="first-name-signup-field">First Name <span class="text-danger">*</span> </label>
+                  <input type="text" class="form-control mb-2" name="first" id="first-name-signup-field" minlength="2" autocomplete="off" />
+                  <span id="first-name-signup-error-span" class="text-danger"></span>
+                </div>
+                <div class="col-12 col-md-6">
+                  <label for="last-name-signup-field">Last Name <span class="text-danger">*</span> </label>
+                  <input type="text" class="form-control mb-2" name="last" id="last-name-signup-field" minlength="2" autocomplete="off" />
+                  <span id="last-name-signup-error-span" class="text-danger"></span>
+                </div>
+              </div>
+              <h6>Address</h6>
+              <div class="row">
+                <div class="col-12 col-md-6 col-xl-4">
+                  <label for="state-signup-field">State <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control mb-2" name="state" id="state-signup-field" minlength="2" autocomplete="off" />
+                  <span id="state-signup-error-span" class="text-danger"></span>
+                </div>
+                <div class="col-12 col-md-6 col-xl-4">
+                  <label for="country-signup-field">Country <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control mb-2" name="country" id="country-signup-field" minlength="2" autocomplete="off" />
+                  <span id="country-signup-error-span" class="text-danger"></span>
+                </div>
+                <div class="col-12 col-md-6 col-xl-4">
+                  <label for="city-signup-field">City</label>
+                  <input autocomplete="off" class="form-control mb-2" type="text" name="city" id="city-signup-field" />
+                  <span id="city-signup-error-span" class="text-danger"></span>
+                </div>
+                <div class="col-12 col-md-6 col-xl-4">
+                  <label for="street-signup-field">Street</label>
+                  <input autocomplete="off" class="form-control mb-2" type="text" name="street" id="street-signup-field" />
+                  <span id="street-signup-error-span" class="text-danger"></span>
+                </div>
+                <div class="col-12 col-md-6 col-xl-4">
+                  <label for="house-signup-field">House Number</label>
+                  <input autocomplete="off" class="form-control mb-2" type="number" name="house" id="house-signup-field" />
+                  <span id="house-signup-error-span" class="text-danger"></span>
+                </div>
+                <div class="col-12 col-md-6 col-xl-4">
+                  <label for="zip-signup-field">Zip Code</label>
+                  <input autocomplete="off" class="form-control mb-2" type="number" name="zip" id="zip-signup-field" />
+                  <span id="zip-signup-error-span" class="text-danger"></span>
+                </div>
+              </div>
+              <h6>Means of contact</h6>
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <label for="email-signup-field">Email<span class="text-danger">*</span></label>
+                  <input autocomplete="off" class="form-control mb-2" type="text" name="email" id="email-signup-field" minlength="2" />
+                  <span id="email-signup-error-span" class="text-danger"></span>
+                </div>
+                <div class="col-12 col-md-6">
+                  <label for="phone-signup-field">Phone <span class="text-danger">*</span></label>
+                  <input autocomplete="off" class="form-control mb-2" type="text" name="phone" id="phone-signup-field" />
+                  <span id="phone-signup-error-span" class="text-danger"></span>
+                </div>
+              </div>
+              <h6>Security</h6>
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <label for="password-signup-field">Password<span class="text-danger">*</span></label>
+                  <input autocomplete="off" class="form-control mb-2" type="password" name="password" id="password-signup-field" minlength="2" />
+                  <span id="password-signup-error-span" class="text-danger"></span>
+                </div>
+                <div class="col-12 col-md-6">
+                  <label for="password-reenter-signup-field">Re-enter Password<span class="text-danger">*</span></label>
+                  <input autocomplete="off" class="form-control mb-2" type="password" name="passwordReEnter" id="password-reenter-signup-field" minlength="2" />
+                  <span id="password-reenter-signup-error-span" class="text-danger"></span>
+                </div>
+              </div>
+              <div class="center my-2">
+                <div>
+                  <label for="isBiz-signup-field">Business Client</label>
+                  <input autocomplete="off" class="form-check-inline mb-2" type="checkbox" name="isBiz" id="isBiz-signup-field" />
+                </div>
+              </div>
+              <input type="button" id="submit-signup-user-btn" value="Submit" class="btn btn-primary col-12 mb-2" disabled />
+              <input type="button" id="cancel-signup-user-btn" value="Cancel" class="btn btn-outline-danger col-12 mb-2" />
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- edit-product-page-->
+      <div id="edit-product-page" class="d-block">
+        <!-- edit-product-page title -->
+        <div class="center mt-4">
+          <div class="col-12 col-md-10 col-xl-8">
+            <h1 id="login-title" class="text-center display-4">EDIT PRODUCT PAGE</h1>
+            <h2 id="login-subtitle" class="fs-5">Here you can edit the selected product</h2>
+            <hr />
+          </div>
+        </div>
+
+        <div class="center">
+          <div class="form col-12 col-md-10 col-xl-8 p2 rounded mb-2">
+            <img id="edit-image-display" src="" alt="" class="img-fluid" />
+          </div>
+        </div>
+        <div class="center">
+          <form class="col-12 col-md-10 col-xl-8 p2 rounded">
+            <div>
+              <div class="mb-3">
+                <label for="url-edit-product-field" class="form-label">Url</label>
+                <input type="text" class="form-control mb-2" name="url" id="url-edit-product-field" minlength="2" />
+                <span id="url-edit-product-error-span" class="text-danger"></span>
+              </div>
+            </div>
+            <div>
+              <div class="mb-3">
+                <label for="alt-edit-product-field" class="form-label">Alt</label>
+                <input type="text" class="form-control mb-2" name="alt" id="alt-edit-product-field" />
+                <span id="alt-edit-product-error-span" class="text-danger"></span>
+              </div>
+            </div>
+            <div>
+              <label for="credit-edit-product-field" class="form-label">Credit</label>
+              <input type="text" class="form-control mb-2" name="credit" id="credit-edit-product-field" />
+              <span id="credit-edit-product-error-span" class="text-danger"></span>
+            </div>
+            <div>
+              <label for="price-edit-product-field" class="form-label">Price</label>
+              <input type="number" class="form-control mb-2" name="price" id="price-edit-product-field" />
+
+              <span id="price-edit-product-error-span" class="text-danger"></span>
+            </div>
+            <input id="submit-edit-product-btn" class="btn btn-primary col-12 mb-2" type="button" value="Submit" disabled />
+            <input id="cancel-edit-product-btn" class="btn btn-dander col-12 mb-2" type="button" value="Cancel" />
+          </form>
+        </div>
+      </div>
+
+      <!-- error-404-page -->
+      <div id="error-404-page" class="d-none">
+        <!-- error-404-page title -->
+        <div class="center mt-4">
+          <div class="col-12 col-md-10 col-xl-8">
+            <h1 id="error-404-page title" class="text-center display-4">ERROR 404</h1>
+            <h2 id="error-404-page subtitle" class="fs-5">Page not found</h2>
+            <hr />
+            <p id="return-to-home-page-link" class="cursor text-primary">click to return to home page</p>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer class="border-top pt-3 navbar-color center">
