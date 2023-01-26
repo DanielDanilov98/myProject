@@ -22,6 +22,12 @@ const initialData = () => {
         credit: "Daniel Danilov",
         price: 1_000,
       },
+      {
+        url: "https://d3m9l0v76dty0.cloudfront.net/system/photos/10083399/large/70602526c5892d95d8e2700b5c24ae4c.png",
+        alt: "iphone",
+        credit: "Daniel Danilov",
+        price: 1_000,
+      },
     ],
     users: [
       {
