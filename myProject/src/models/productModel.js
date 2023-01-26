@@ -18,7 +18,7 @@ class Product {
   }
   generateId(array) {
     const random = randomNumBetween(1_000_000, 9_999_999);
-    const item = array.find((item) => _id === random);
+    const item = array.find((item) => item._id === random);
     if (!item) return (this.#id = random);
     this.generateId(array);
   }
