@@ -77,66 +77,66 @@
             <hr />
           </div>
         </div>
+        <div id="search-bar-container">
+          <div class="container mb-2">
+            <input type="text" placeholder="Search product by title" class="form-control" id="search-input" />
+          </div>
+          <div id="data-container" class="d-block">
+            <!-- display controllers -->
+            <div class="container mb-2">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <i id="cards-icon" class="bi bi-grid-3x3-gap-fill cursor fs-3 p-1"></i>
+                  <i id="table-icon" class="bi bi-table fs-3 p-1 cursor"></i>
+                </div>
+                <div>
+                  <i id="sort-down-icon" class="bi bi-sort-alpha-down-alt fs-3 p-1 cursor"></i>
+                  <i id="sort-up-icon" class="bi bi-sort-alpha-down fs-3 p-1 cursor"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- cards display -->
+
+            <div id="cards-display" class="d-dlock">
+              <div class="container">
+                <div id="cards" class="row"></div>
+              </div>
+            </div>
+
+            <!-- table display -->
+            <div id="table-display" class="d-none">
+              <table class="table container">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>image</th>
+                    <th>product</th>
+                    <th>Title</th>
+                    <th>Credit</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                  </tr>
+                </thead>
+                <tbody id="tbody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- info display -->
+
+        <!-- no info display -->
+        <div id="no-data-container" class="d-none">
+          <div class="center m-t">
+            <div class="col-12 col-md-10 col-xl-8">
+              <h2 class="fs-5">OOOps... It seems that there are no product to show</h2>
+              <p id="goto-create-product-page-link" class="cursor text-primary">click here to add a new product...</p>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- search input -->
-      <div id="search-bar-container">
-        <div class="container mb-2">
-          <input type="text" placeholder="Search product by title" class="form-control" id="search-input" />
-        </div>
-      </div>
-
-      <!-- info display -->
-      <div id="data-container" class="d-block">
-        <!-- display controllers -->
-        <div class="container mb-2">
-          <div class="d-flex justify-content-between">
-            <div>
-              <i id="cards-icon" class="bi bi-grid-3x3-gap-fill cursor fs-3 p-1"></i>
-              <i id="table-icon" class="bi bi-table fs-3 p-1 cursor"></i>
-            </div>
-            <div>
-              <i id="sort-down-icon" class="bi bi-sort-alpha-down-alt fs-3 p-1 cursor"></i>
-              <i id="sort-up-icon" class="bi bi-sort-alpha-down fs-3 p-1 cursor"></i>
-            </div>
-          </div>
-        </div>
-
-        <!-- cards display -->
-
-        <div id="cards-display" class="d-dlock">
-          <div class="container">
-            <div id="cards" class="row"></div>
-          </div>
-        </div>
-
-        <!-- table display -->
-        <div id="table-display" class="d-none">
-          <table class="table container">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>image</th>
-                <th>product</th>
-                <th>Title</th>
-                <th>Credit</th>
-                <th>Edit</th>
-                <th>Delete</th>
-              </tr>
-            </thead>
-            <tbody id="tbody"></tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- no info display -->
-      <div id="no-data-container" class="d-none">
-        <div class="center m-t">
-          <div class="col-12 col-md-10 col-xl-8">
-            <h2 class="fs-5">OOOps... It seems that there are no product to show</h2>
-            <p id="goto-create-product-page-link" class="cursor text-primary">click here to add a new product...</p>
-          </div>
-        </div>
-      </div>
 
       <!-- about page -->
       <div id="about-page" class="d-none">
