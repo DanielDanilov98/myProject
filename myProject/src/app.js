@@ -1,16 +1,46 @@
-import { ABOUT_PAGE_LINK, LINK_HOME_PAGE, HOME_PAGE_LINK, CREATE_PRODUCT_PAGE_LINK, LOGIN_PAGE_LINK, SIGNUP_PAGE_LINK, TABLE_ICON, LINK_TO_CREATE_PRODUCT_PAGE, CARDS_ICON, SORT_DOWN_ICON, SORT_UP_ICON, SEARCH_BAR } from "./services/domService.js";
+import {
+  ABOUT_PAGE_LINK,
+  LINK_HOME_PAGE,
+  HOME_PAGE_LINK,
+  CREATE_PRODUCT_PAGE_LINK,
+  LOGIN_PAGE_LINK,
+  SIGNUP_PAGE_LINK,
+  TABLE_ICON,
+  LINK_TO_CREATE_PRODUCT_PAGE,
+  CARDS_ICON,
+  SORT_DOWN_ICON,
+  SORT_UP_ICON,
+  SEARCH_BAR,
+} from "./services/domService.js";
 import PAGES from "../src/models/pageModel.js";
-import { onChangeDisplayMode, onChangePage, setNavDisplay } from "./routes/router.js";
-import { handleCancelCreateItem, handleCreateItem, onCancelEditItem, onCreateNewItem, onEditItem } from "./services/itemService.js";
+import {
+  onChangeDisplayMode,
+  onChangePage,
+  setNavDisplay,
+} from "./routes/router.js";
+import {
+  handleCancelCreateItem,
+  handleCreateItem,
+  onCancelEditItem,
+  onCreateNewItem,
+  onEditItem,
+} from "./services/itemService.js";
 import initialData from "./initialData/initialData.js";
-import { handleSignup, onSignupNewUser, handleCancelSignup, handleLogin } from "./services/userService.js";
+import {
+  handleSignup,
+  onSignupNewUser,
+  handleCancelSignup,
+  handleLogin,
+} from "./services/userService.js";
 import DISPLAY from "./models/displayModel.js";
 import { handleDisplayMode } from "./services/displayModeService.js";
-import { filterArrayOfObjectsByTerm, sortArrayOfObject } from "./utils/algoMethods.js";
+import {
+  filterArrayOfObjectsByTerm,
+  sortArrayOfObject,
+} from "./utils/algoMethods.js";
 
 //#region משתנים גלובליים
 let { users, products } = initialData();
-let counter = 0;
 let display;
 //#endregion
 
@@ -32,11 +62,17 @@ LINK_HOME_PAGE.addEventListener("click", () => onChangePage(PAGES.HOME));
 
 //בקרי תצוגה
 
-TABLE_ICON.addEventListener("click", () => onChangeDisplayMode(products, DISPLAY.TABLE));
-CARDS_ICON.addEventListener("click", () => onChangeDisplayMode(products, DISPLAY.CARDS));
+TABLE_ICON.addEventListener("click", () =>
+  onChangeDisplayMode(products, DISPLAY.TABLE)
+);
+CARDS_ICON.addEventListener("click", () =>
+  onChangeDisplayMode(products, DISPLAY.CARDS)
+);
 
 // שדה חיפוש
-SEARCH_BAR.addEventListener("input", (e) => handleFilterProduct(e.target.value));
+SEARCH_BAR.addEventListener("input", (e) =>
+  handleFilterProduct(e.target.value)
+);
 //#endregion
 
 //#region יצירת מוצר
@@ -56,9 +92,15 @@ export const handleSubmitSignup = () => {
 //#endregion
 
 //#region שינוי תצוגה
-TABLE_ICON.addEventListener("click", () => (display = handleDisplayMode(products, DISPLAY.TABLE)));
+TABLE_ICON.addEventListener(
+  "click",
+  () => (display = handleDisplayMode(products, DISPLAY.TABLE))
+);
 
-CARDS_ICON.addEventListener("click", () => (display = handleDisplayMode(products, DISPLAY.CARDS)));
+CARDS_ICON.addEventListener(
+  "click",
+  () => (display = handleDisplayMode(products, DISPLAY.CARDS))
+);
 
 //#endregion
 
